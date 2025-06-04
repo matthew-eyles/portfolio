@@ -1,7 +1,7 @@
 /*CUSTOM PROPERTIES*/
 :root {
-  --main-orange: #FF7100;
-  --main-blue: #008EFF;
+  --main-orange: #ff7100;
+  --main-black: #000000;
 }
 
 /*SCROLL BEHAVIOR*/
@@ -11,8 +11,9 @@ html {
 
 /*MARGIN & PADDING RESET*/
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*NAVBAR STYLING*/
@@ -46,11 +47,11 @@ li {
 /*FONT, COLOR AND WEIGHT FOR A ITEMS*/
 a {
   text-decoration: none;
-  font-family: "Barlow Semi Condensed", serif;
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
-  color: black;
+  color: var(--main-black);
   display: block;
   padding: 1rem;
   border-radius: 25px;
@@ -58,8 +59,9 @@ a {
 
 /*NAV HOVER STYLING*/
 nav a:hover {
-  background: black;
+  background: var(--main-black);
   color: var(--main-orange);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 /*WELCOME SECTION STYLING*/
@@ -70,14 +72,14 @@ nav a:hover {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: var(--main-black);
 }
 
 /*WELCOME SECTION H1 STYLING*/
 h1 {
   font-size: 6rem;
   color: var(--main-orange);
-  font-family: "Barlow Semi Condensed", serif;
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 800;
   font-style: normal;
   text-align: center;
@@ -85,7 +87,7 @@ h1 {
 
 /*WELCOME SECTION P STYLING*/
 .welcome-section > p {
-  font-family: "Barlow Semi Condensed", serif;
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 700;
   font-style: normal;
   color: var(--main-orange);
@@ -97,15 +99,15 @@ h1 {
   text-align: center;
   padding: 2rem 2rem;
   background: var(--main-orange);
-/*THIS ENSURES THAT THE NAVBAR SCROLL DOESN'T CUT OFF THE PROJECT SECTION TITLE*/
+  /*Ensures the navbar scroll doesn't cut off section titles*/
   scroll-margin-top: 100px;
 }
 
 /*PROJECT SECTION TITLE STYLING*/
 .project-h2 {
   font-size: 4rem;
-  color: black;
-  font-family: "Barlow Semi Condensed", serif;
+  color: var(--main-black);
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 800;
   font-style: normal;
   margin-bottom: 50px;
@@ -117,9 +119,8 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 4rem;
   width: 100%;
-  max-width: 1300px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
 /*PROJECT TILE IMAGE STYLING*/
@@ -144,7 +145,8 @@ h1 {
 
 /*TILE HOVER COLOR*/
 .projects a:hover {
-  background: #3b3b3b;
+  background-color: #3b3b3b;
+  transition: background-color 0.5s ease-in-out;
 }
 
 /*CONTACT SECTION COLUMN FLEX, TEXT ALIGN, PADDING AND COLOUR*/
@@ -155,10 +157,10 @@ h1 {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80vh;
+  height: 40vh;
   padding: 0;
-  background: black;
-/*THIS ENSURES THAT THE NAVBAR SCROLL DOESN'T CUT OFF THE PROJECT SECTION TITLE*/
+  background: var(--main-black);
+  /*THIS ENSURES THAT THE NAVBAR SCROLL DOESN'T CUT OFF THE PROJECT SECTION TITLE*/
   scroll-margin-top: 100px;
 }
 
@@ -166,11 +168,11 @@ h1 {
 .contact-section-header > h2 {
   font-size: 4rem;
   color: var(--main-orange);
-  font-family: "Barlow Semi Condensed", serif;
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 800;
   font-style: normal;
   margin: 0 auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   text-align: center;
 }
 
@@ -188,29 +190,34 @@ h1 {
 
 /*CONTACT LINKS HOVER STYLING*/
 .contact-links > a:hover {
-  color: black;
+  color: var(--main-black);
   background-color: var(--main-orange);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 /*ICON STYLING*/
 .fab {
-    font-family: "Font Awesome 5 Brands";
+  font-family: 'Font Awesome 5 Brands';
 }
 
-.fa, .fab, .fal, .far, .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 /*FOOTER STYLING*/
 footer {
   background-color: var(--main-orange);
-  font-family: "Barlow Semi Condensed", serif;
+  font-family: 'Barlow Semi Condensed', serif;
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
@@ -231,77 +238,103 @@ footer {
 }
 
 /*MOBILE DEVICE STYLING*/
+
+/*TABLETS - WIDTH UNDER 768PX*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/*PHONES - WIDTH UNDER 440PX*/
 @media (max-width: 440px) {
+  .nav {
+    justify-content: space-evenly;
+  }
 
-.navlist {
-  display: flex;
-  margin-right: 0px;
-}
+  .nav a {
+    font-size: 1.25rem;
+    padding: 0px;
+    margin: 0px;
+  }
 
-li {
-  margin: 0px;
-}
+  .navlist {
+    margin: 0px;
+  }
 
-h1 {
-  font-size: 3rem;
-  color: var(--main-orange);
-  font-family: "Barlow Semi Condensed", serif;
-  font-weight: 800;
-  font-style: normal;
-  text-align: center;
-}
+  h1 {
+    font-size: 3rem;
+    padding: 30px;
+  }
 
-.nav {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--main-orange);
-  z-index: 10;
-}
+  #welcome-section p {
+    font-size: 2rem;
+  }
 
-a {
-  font-size: 1.5rem;
-}
+  a {
+    font-size: 1.5rem;
+  }
 
-.contact-section-header > h2 {
-  font-size: 3rem;
-  color: var(--main-orange);
-  font-family: "Barlow Semi Condensed", serif;
-  font-weight: 800;
-  font-style: normal;
-  margin: 0 auto;
-  padding: 0px 0px 50px 0px;
-  text-align: center;
-}
+  .projects {
+    padding: 20px;
+  }
 
-.project-h2 {
-  font-size: 3rem;
-  color: black;
-  font-family: "Barlow Semi Condensed", serif;
-  font-weight: 800;
-  font-style: normal;
-  margin-bottom: 50px;
-}
+  .project-h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
 
-.project-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
+  .project-title {
+    font-size: 1.25rem;
+  }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
+  .project-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-section-header > h2 {
+    font-size: 2rem;
+    padding: 0px 0px 10px 0px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-links > a {
+    padding: 10px;
+  }
+
+  #profile-link {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footerlink {
+    font-size: 1rem;
+    padding: 0px;
+  }
+
+  .footerlink {
+    font-size: 1rem;
+    padding: 0px;
+  }
 }
