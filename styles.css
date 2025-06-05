@@ -16,6 +16,55 @@ html {
   box-sizing: border-box;
 }
 
+/*NEW NAV STYLING*/
+.topnav {
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: var(--main-orange);
+}
+
+/*HIDE LINKS INSIDE NAV MENU EXCEPT FOR 'MENU' & BURGER ICON*/
+.topnav #myLinks {
+  display: none;
+}
+
+/*STYLE NAVIGATION MENU LINKS*/
+.topnav a {
+  color: var(--main-black);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+/*STYLE THE HAMBURGER MENU*/
+.topnav a.icon {
+  background: var(--main-orange);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*NEW NAV HOVER STYLING - NEEDS WORK*/
+
+/* Change background and text color on hover */
+.topnav a:hover {
+  background: var(--main-black);
+  color: var(--main-orange);
+  transition: all 0.5s ease-in-out;
+}
+
+/*STYLE THE ACTIVE LINK*/
+/*
+.active {
+  background: var(--main-black);
+  color: var(--main-orange);
+}
+*/
+
 /*NAVBAR STYLING*/
 .nav {
   display: flex;
@@ -54,7 +103,6 @@ a {
   color: var(--main-black);
   display: block;
   padding: 1rem;
-  border-radius: 25px;
 }
 
 /*NAV HOVER STYLING*/
@@ -99,7 +147,7 @@ h1 {
   text-align: center;
   padding: 2rem 2rem;
   background: var(--main-orange);
-  /*Ensures the navbar scroll doesn't cut off section titles*/
+  /*Adjusts scroll position for anchored links to prevent navbar overlap*/
   scroll-margin-top: 100px;
 }
 
@@ -139,7 +187,7 @@ h1 {
 
 /*TILE BACKGROUND AND BORDER RADIUS*/
 .project-tile {
-  background: black;
+  background: var(--main-black);
   border-radius: 25px;
 }
 
@@ -185,7 +233,7 @@ h1 {
 /*CONTACT LINKS STYLING*/
 .contact-links > a {
   color: var(--main-orange);
-  padding: 50px;
+  padding: 25px;
 }
 
 /*CONTACT LINKS HOVER STYLING*/
@@ -234,45 +282,36 @@ footer {
 /*FOOTER LINK HOVER STYLING*/
 .footerlink:hover {
   color: var(--main-orange);
-  background-color: black;
+  background-color: var(--main-black);
 }
 
 /*MOBILE DEVICE STYLING*/
 
 /*TABLETS - WIDTH UNDER 768PX*/
+/* Responsive styling for tablets */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-/*PHONES - WIDTH UNDER 440PX*/
-@media (max-width: 440px) {
   .nav {
     justify-content: space-evenly;
   }
 
   .nav a {
-    font-size: 1.25rem;
-    padding: 0px;
+    font-size: 2rem;
+    padding: 25px;
     margin: 0px;
   }
 
   .navlist {
     margin: 0px;
+    width: 100%;
+    justify-content: space-evenly;
   }
 
   h1 {
-    font-size: 3rem;
-    padding: 30px;
+    font-size: 4.5rem;
   }
 
   #welcome-section p {
-    font-size: 2rem;
-  }
-
-  a {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
   }
 
   .projects {
@@ -280,61 +319,117 @@ footer {
   }
 
   .project-h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 25px;
   }
 
   .project-title {
-    font-size: 1.25rem;
-  }
-
-  .project-tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+    font-size: 1.75rem;
   }
 
   .contact-section-header > h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
     padding: 0px 0px 10px 0px;
   }
 
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-  }
-
   .contact-links > a {
-    padding: 10px;
-  }
-
-  #profile-link {
-    font-size: 1.5rem;
+    padding: 20px;
+    font-size: 2rem;
   }
 
   footer {
-    font-size: 1rem;
+    font-size: 1.75rem;
     text-align: center;
     padding: 20px;
   }
 
   .footerlink {
-    font-size: 1rem;
+    font-size: 1.75rem;
     padding: 0px;
   }
+}
 
-  .footerlink {
-    font-size: 1rem;
-    padding: 0px;
+/* Responsive styling for phones */
+@media (max-width: 440px) {
+  @media (max-width: 440px) {
+    .nav {
+      justify-content: space-evenly;
+    }
+
+    .nav a {
+      font-size: 1.25rem;
+      padding: 10px;
+      margin: 0px;
+    }
+
+    .navlist {
+      margin: 0px;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+
+    h1 {
+      font-size: 3rem;
+      padding: 30px;
+    }
+
+    #welcome-section p {
+      font-size: 2rem;
+    }
+
+    .projects {
+      padding: 20px;
+    }
+
+    .project-h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+    }
+
+    .project-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .contact-section-header > h2 {
+      font-size: 2rem;
+      padding: 0px 0px 10px 0px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-links > a {
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      font-size: 1rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footerlink {
+      font-size: 1rem;
+      padding: 0px;
+    }
   }
 }
