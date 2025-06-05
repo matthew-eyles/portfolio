@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Matthew Eyles</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
-
-    <nav id="navbar" class="nav">
-      
+    <!-- OLD NAV
+     <nav id="navbar" class="nav">
       <ul class="navlist">
-
-        <li>
-          <a href="#welcome-section">About Me</a>
-        </li>
-
         <li>
           <a href="#projects">My Work</a>
         </li>
@@ -29,88 +36,135 @@
         <li>
           <a href="#contact">Contact Me</a>
         </li>
-
       </ul>
-
     </nav>
+    -->
+
+    <div class="topnav">
+      <a href="#welcome-section" class="active">Home</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="#projects">My Work</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+      <!-- Hamburger menu/bar icon to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
     <section id="welcome-section" class="welcome-section">
-
       <h1>Hi, I'm Matthew Eyles.</h1>
       <p>A web developer.</p>
-
     </section>
 
     <section id="projects" class="projects">
-
       <h2 class="project-h2">Some of my work...</h2>
 
       <div class="project-tiles">
-
-        <a href="https://codepen.io/Matt-Eyles/pen/raNBQXG" target="_blank" class="project-tile">
-        <img class="project-image" src="https://i.ibb.co/RGvkykQ1/kayeford.png" alt="project">
-        <p class="project-title">Kaye Ford Tribute Page</p>
+        <a
+          href="https://codepen.io/Matt-Eyles/pen/raNBQXG"
+          target="_blank"
+          class="project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://i.ibb.co/RGvkykQ1/kayeford.png"
+            alt="Kaye Ford Tribute Page Screenshot"
+          />
+          <p class="project-title">Kaye Ford Tribute Page</p>
         </a>
 
-        <a href="https://codepen.io/Matt-Eyles/pen/OPJLrep" target="_blank" class="project-tile">
-        <img class="project-image" src="https://i.ibb.co/6RHKrrqL/powerbuilding.png" alt="project">
-        <p class="project-title">Powerbuilding Programs</p>
+        <a
+          href="https://codepen.io/Matt-Eyles/pen/OPJLrep"
+          target="_blank"
+          class="project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://i.ibb.co/6RHKrrqL/powerbuilding.png"
+            alt="Powerbuilding Programs Screenshot"
+          />
+          <p class="project-title">Powerbuilding Programs</p>
         </a>
 
-        <a href="https://codepen.io/Matt-Eyles/pen/mydbvdr" target="_blank" class="project-tile">
-        <img class="project-image" src="https://i.ibb.co/ZzLDY48G/scarlette.png" alt="project">
-        <p class="project-title">Scarlett The Long</p>
+        <a
+          href="https://codepen.io/Matt-Eyles/pen/mydbvdr"
+          target="_blank"
+          class="project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://i.ibb.co/ZzLDY48G/scarlette.png"
+            alt="Scarlett The Long Screenshot"
+          />
+          <p class="project-title">Scarlett The Long</p>
         </a>
 
-        <a href="https://codepen.io/Matt-Eyles/pen/VYwZgLe" target="_blank" class="project-tile">
-        <img class="project-image" src="https://i.ibb.co/7xfxnNWj/surveyform.png" alt="project">
-        <p class="project-title">Survey Form</p>
+        <a
+          href="https://codepen.io/Matt-Eyles/pen/VYwZgLe"
+          target="_blank"
+          class="project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://i.ibb.co/7xfxnNWj/surveyform.png"
+            alt="Survey Form Screenshot"
+          />
+          <p class="project-title">Survey Form</p>
         </a>
-        
       </div>
-
     </section>
 
     <section id="contact" class="contact">
-
       <div class="contact-section-header">
-      <h2>Contact Me Here:</h2>
+        <h2>Contact me here:</h2>
       </div>
-      
 
       <div class="contact-links">
-      <a href="https://github.com/matthew-eyles" target="_blank" id="profile-link" class="github-profile-link">
-      <i class="fab fa-github"></i>
-       Github
-      </a>
+        <a
+          href="https://github.com/matthew-eyles"
+          target="_blank"
+          class="profile-link github-profile-link"
+        >
+          <i class="fab fa-github"></i>
+          Github
+        </a>
 
-      <a href="https://www.facebook.com/profile.php?id=100017011421214" target="_blank" id="profile-link" class="facebook-profile-link">
-      <i class="fab fa-facebook-square"></i>
-       Facebook
-      </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100017011421214"
+          target="_blank"
+          class="profile-link facebook-profile-link"
+        >
+          <i class="fab fa-facebook-square"></i>
+          Facebook
+        </a>
 
-      <a href="mailto:mgeyles@gmail.com" target="_blank" id="profile-link" class="email">
-      <i class="fas fa-at"></i>
-       Email
-      </a>
+        <a
+          href="mailto:mgeyles@gmail.com"
+          target="_blank"
+          class="profile-link email"
+        >
+          <i class="fas fa-at"></i>
+          Email
+        </a>
 
-      <a href="tel:+447539560999" target="_blank" id="profile-link" class="callme">
-      <i class="fas fa-phone"></i>
-       Phone
-      </a>
-  </div>
-      
-
+        <a href="tel:+447539560999" target="_blank" class="profile-link callme">
+          <i class="fas fa-phone"></i>
+          Phone
+        </a>
+      </div>
     </section>
 
     <footer>
-
-      <p>Created for <a class="footerlink" href="https://www.codecademy.com" target="_blank" >Codecademy</a>
-      <i class="far fa-copyright"></i>
+      <p>
+        Created for
+        <a class="footerlink" href="https://www.codecademy.com" target="_blank"
+          >Codecademy</a
+        >
+        <i class="far fa-copyright"></i>
       </p>
-
     </footer>
-
+    <script src="script.js" defer></script>
   </body>
-
 </html>
